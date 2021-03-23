@@ -52,3 +52,10 @@ console.log("Array: ", Array(var2str));
 console.log(">>> STRING TO BOOLEAN")
 console.log("String: ", String(null));
 console.log("Boolean: ", Boolean(String(null)));
+
+// There are implicit Type Conversions in Javascript. These are called Type Coercion.
+// Example:
+console.log(">>> TYPE COERCION IN JS");
+variable = 12;
+var2str = '1245';
+console.log('Result of Number + String: ', variable+var2str);
