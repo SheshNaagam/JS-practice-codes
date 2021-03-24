@@ -32,3 +32,21 @@ function caller (percent) {
 
   // Ternary Operator
   console.log(typeof(percent) != 'undefined' ? 'Run caller(percent)' : 'Please enter percent = x');
+
+  // Switch Case Statement
+  let attendance = "High";
+
+  switch (attendance) {
+    case 'High':
+      console.log("High Attendance");
+      break;
+    case 'Good':
+      console.log("Good Attendance");
+      break;
+    case 'Moderate':
+      console.log("Moderate Attendance")
+      break;
+    case 'Low':
+      console.log("Failed Attendance!") ;
+      break;
+  }
