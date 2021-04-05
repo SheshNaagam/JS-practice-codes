@@ -1,40 +1,54 @@
 // If Else
-namename = "Becoming Pro."
-if (typeof(namename) !== 'undefined') {
-  console.log(`Coder is ${namename}.`);
-}
-else{
-  console.log(`Try Harder. You are still Not ${namename}`);
-}
+let namename;
+function namer (namename) {
 // Used Template Strings
 // Used Strict Comparison Operators
 // Using Undefined check is more efficient logic
 
+  if (typeof(namename) !== 'undefined')
+    console.log(`Coder is ${namename}.`);
+
+  else
+    console.log(`Enter Your Name. Set "namename = x". Your Name is Still ${namename}`);
+
+}
+namer(namename);
+
 // ElseIf Ladder
 let percent;
+let attendance;   // Used Later in Switch Statement
 
 function caller (percent) {
   if (percent >= 90) {
     console.log(`Percent Rank: S with Percentage: ${percent}`);
+    attendance = 'High';
   }
   else if (percent >= 70) {
     console.log(`Percent Grade: A with Percentage: ${percent}`);
+    attendance = 'Good';
   }
   else if (percent >= 50) {
     console.log(`Percent Grade: B with Percentage: ${percent}`);
+    attendance = 'Moderate';
   }
   else if (percent >= 30) {
-    console.log(`Percent Grade: C with Percentage: ${percent}`)
+    console.log(`Percent Grade: C with Percentage: ${percent}`);
+    attendance = 'Moderate';
+  }
+  else if (percent < 30) {
+    console.log("FAILED!!! Better Luck Never!");
+    attendance = 'Low';
   }
   else {
-    console.log("FAILED!!! Better Luck Never!");
-  }}
+    console.log("You Must Define Your Percentage in Console using percent = x");
+    attendance = 'None';
+  }
+}
+caller(percent);
 
-  // Ternary Operator
-  console.log(typeof(percent) != 'undefined' ? 'Run caller(percent)' : 'Please enter percent = x');
 
-  // Switch Case Statement
-  let attendance = "High";
+// Switch Case Statement
+function attend (attendance) {
 
   switch (attendance) {
     case 'High':
@@ -49,4 +63,18 @@ function caller (percent) {
     case 'Low':
       console.log("Failed Attendance!") ;
       break;
+    case 'None':
+      console.log("Run runall() Function After Setting Up namename and percent.");
+      break;
   }
+}
+attend(attendance);
+
+// Ternary Operator
+console.log(typeof(attendance) === "undefined" ? "Attendance is undefined. Set Percentage To Autocalculate Attendance." : "You are Welcome To Change Values of namename and percent");
+
+function runall(){
+  namer(namename);
+  caller(percent);
+  attend(attendance);
+}
