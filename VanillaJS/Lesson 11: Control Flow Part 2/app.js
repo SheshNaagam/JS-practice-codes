@@ -30,11 +30,11 @@ for(let i = 0; i < CreamFlavours.length; i++) {
 
 // For Each Loop
 
-CreamFlavours.forEach (function(StoredValue, index) {
+CreamFlavours.forEach (function(IndexValue, index) {
 
-  console.log(`Flavour in Slot ${index}: ${StoredValue}`);
+  console.log(`Flavour in Slot ${index}: ${IndexValue}`);
 
-  if (StoredValue === 'Butterscotch') 
+  if (IndexValue === 'Butterscotch') 
     console.log(`Butterscotch is available. Ordering...`);
 });
 
@@ -49,15 +49,16 @@ for (let index in CreamFlavours) {
 }
 
 
-// Mapping: Recieves Function As Argument, Passes Every Element in Array One By One
+// Mapping: Recieves Function As Argument, Passes Every Element in Array One By One. Convert Data into Array Before Mapping. Following Example Uses Array of Objects. No Need Of Conversion
 
-let CreamShapes = {
-  triangle: 'Conical',
-  square: 'Square Cup',
-  circle: 'Bowl',
+let CreamShapes = [
+  {shape: 'Conical'},
+  {shape: 'Cup'},        // Array of Objects.
+  {shape: 'Bowl'},
 
-}
+];
 
-console.log(`${CreamShapes.map(function (element) {
-  return element;
-})}`);
+const mapper = CreamShapes.map(function (element) {
+  return element.shape;
+});
+console.log(`Ice Cream Types Available: ${mapper}`);
