@@ -26,7 +26,11 @@
         <li>InnerHTML</li>
         <li>InnerHeight and InnerWidth</li>
         <li>Location Properties</li>
-        <li><input type="button" onclick=moreprop() value="More Properties"></li>
+        <li>BOM History 
+          <input style="margin-top:5px;" type="button" value="Go Back" onclick="beck()">
+          <input style="margin-top:5px;" type="button" value="Go Forward" onclick="frent()">
+        </li>
+        <li><input style="margin-top:10px;" type="button" onclick=moreprop() value="More Properties"></li>
       </ul><br>
     </li>
     <li style="color: darksalmon;"><strong>Window Object Methods</strong></li>
@@ -36,13 +40,13 @@
         <li>Confirm</li>
         <li>Open</li>
         <li>Base64 Encoding and Decoding</li>
-        <li><input type="button" value="More Methods" onclick=moremeth()></li>
+        <li><input style="margin-top:5px;" type="button" value="More Methods" onclick=moremeth()></li>
     </ul>
   </ul>
   </h2>
   <h3>
     Go To Index:
-    <input type="button" onclick=confirmnext() value="Index">
+    <input type="button" onclick=confirmnext() value="Index"> <br><br>
   </h3>
   
   <script src="app.js"></script> <!--Linkng JS File instead of Inline JS-->

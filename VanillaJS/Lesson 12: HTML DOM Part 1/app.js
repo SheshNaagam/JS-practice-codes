@@ -5,17 +5,15 @@ document.getElementById("DOM").innerHTML = strings;
 
 
 // The Window Object Represents An Open Window In A Browser. New Window Object is Created For Each iframe Tag.
-console.log("PROPERTIES OF WINDOW OBJECT >>>");
-
 
 // Window InnerHeight and InnerWidth Property
-console.log(`Inner Height: ${window.innerHeight} Inner Width: ${window.innerWidth}`);
+console.log(`PROPERTIES OF WINDOW OBJECT >>>\n  Inner Height: ${window.innerHeight}\n  Inner Width: ${window.innerWidth}`);
 
 
-// Location Property of Window
-console.log(` Hostname: ${window.location.hostname},\n Port: ${window.location.port}, \n Get Query String: ${window.location.search} `); // Any Search Parameter in URL Will Be Printed with Search. Ex: In URL if There is Search Parameter: ?variable=12, Then It Will Be Fetched By Search Property of Location.
+// Location Object of Window
+console.log(`LOCATION OBJECT>>>\n Hostname: ${window.location.hostname},\n Port: ${window.location.port}, \n Get Query String: ${window.location.search} `); // Any Search Parameter in URL Will Be Printed with Search. Ex: In URL if There is Search Parameter: ?variable=12, Then It Will Be Fetched By Search Property of Location.
 
-// location.href Property Redirects URL in Same Window.
+// location.href Redirects URL in Same Window.
 function moreprop () {
   if (window.confirm("Do You Want To Visit W3Schools?")) {
     window.location.href = "https://www.w3schools.com/jsref/obj_window.asp";
@@ -25,6 +23,20 @@ function moremeth () {
   if (window.confirm("Do You Want To Visit W3Schools?")) {
     window.location.href = "https://www.w3schools.com/jsref/obj_window.asp";
   }
+}
+
+
+
+// History Object of Window // History is Actually BOM and Not DOM, i.e Browser Object Model.
+
+function beck () {
+  window.history.back(); // Visit Some Site And Come To Localhost To Make It Work.
+  // Alternatively You Can Use window.history.go(-n) To Go Back n Number of Times
+}
+
+function frent () {
+  window.history.forward(); // Visit Some Site and Press Back Button on Browser, Then Use The Forward Button To Make It Work.
+  // Alternatively You Can Use window.history.go(n) To Go Forward n Number of Times
 }
 
 
@@ -49,3 +61,7 @@ function confirmnext() {
 let data = input;
 let encodedData = window.btoa(data);
 console.log(`Encoded Data: ${encodedData} Decoded Data: ${window.atob(encodedData)}`);
+
+
+
+//
