@@ -1,2 +1,1 @@
-# WebDev
-This repository contains projects and assignments related to Web Development.
+Practicing Basic Code Concepts for JS
